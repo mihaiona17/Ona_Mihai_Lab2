@@ -1,0 +1,14 @@
+@page
+@model Ona_Mihai_Lab2.Pages.Publishers.IndexModel
+
+<h1>Publishers</h1>
+<p><a asp-page="CreatePublisher">Create New</a></p>
+<table class="table">
+    <thead><tr><th>Publisher Name</th></tr></thead>
+    <tbody>
+    @foreach (var item in Model.Publisher)
+    {
+        <tr><td>@item.PublisherName</td></tr>
+    }
+    </tbody>
+</table>

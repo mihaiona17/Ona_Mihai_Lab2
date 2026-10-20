@@ -8,7 +8,6 @@ namespace Ona_Mihai_Lab2.Models
         public int ID { get; set; }
         [Display(Name = "Book Title")]
         public string Title { get; set; }
-        // Author relationship: store foreign key and navigation
         public int? AuthorID { get; set; }
         public Author? Author { get; set; }
         [Column(TypeName = "decimal(6, 2)")]
@@ -17,6 +16,8 @@ namespace Ona_Mihai_Lab2.Models
         public DateTime PublishingDate { get; set; }
         public int? PublisherID { get; set; }
         public Publisher? Publisher { get; set; }
+
+        public ICollection<BookCategory>? BookCategories { get; set; }
     }
 
 

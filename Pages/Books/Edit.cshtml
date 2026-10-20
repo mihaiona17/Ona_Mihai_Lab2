@@ -37,6 +37,30 @@
                 <span asp-validation-for="Book.PublisherID" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <div class="table">
+                    <table>
+                        <tr>
+                            @{ var categoryCount = 0; }
+                            @foreach (var category in Model.AssignedCategoryDataList)
+                            {
+                                if (categoryCount > 0 && categoryCount % 3 == 0)
+                                {
+                                    @:</tr><tr>
+                                }
+                                <td>
+                                    <input type="checkbox"
+                                           name="selectedCategories"
+                                           value="@category.CategoryID"
+                                           @Html.Raw(category.Assigned ? "checked=\"checked\"" : "") />
+                                    @category.CategoryID @category.Name
+                                </td>
+                                categoryCount++;
+                            }
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

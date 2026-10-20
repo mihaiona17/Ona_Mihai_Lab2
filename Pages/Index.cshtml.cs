@@ -7,11 +7,11 @@ namespace Ona_Mihai_Lab2.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly DbContext _context;
+        private readonly Ona_Mihai_Lab2Context _context;
 
         public IList<Book> Book { get; set; }
 
-        public IndexModel(DbContext context)
+        public IndexModel(Ona_Mihai_Lab2Context context)
         {
             _context = context;
         }

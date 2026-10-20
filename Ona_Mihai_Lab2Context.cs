@@ -5,4 +5,6 @@ public class Ona_Mihai_Lab2Context(DbContextOptions<Ona_Mihai_Lab2Context> optio
     public DbSet<Ona_Mihai_Lab2.Models.Book> Book { get; set; } = default!;
     public DbSet<Ona_Mihai_Lab2.Models.Author> Authors { get; set; } = default!;
     public DbSet<Ona_Mihai_Lab2.Models.Publisher> Publishers { get; set; } = default!;
+
+    public DbSet<Ona_Mihai_Lab2.Models.Category> Category { get; set; } = default!;
 }

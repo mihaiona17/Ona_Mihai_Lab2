@@ -1,0 +1,11 @@
+@page
+@model Ona_Mihai_Lab2.Pages.Publishers.CreatePublisherModel
+
+<h1>Create Publisher</h1>
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <label asp-for="Publisher.PublisherName"></label>
+    <input asp-for="Publisher.PublisherName" class="form-control" />
+    <span asp-validation-for="Publisher.PublisherName" class="text-danger"></span>
+    <button type="submit" class="btn btn-primary mt-2">Create</button>
+</form>
