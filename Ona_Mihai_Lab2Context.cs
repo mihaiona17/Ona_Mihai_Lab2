@@ -7,4 +7,6 @@ public class Ona_Mihai_Lab2Context(DbContextOptions<Ona_Mihai_Lab2Context> optio
     public DbSet<Ona_Mihai_Lab2.Models.Publisher> Publishers { get; set; } = default!;
 
     public DbSet<Ona_Mihai_Lab2.Models.Category> Category { get; set; } = default!;
+    public DbSet<Ona_Mihai_Lab2.Models.Member> Members { get; set; } = default!;
+    public DbSet<Ona_Mihai_Lab2.Models.Borrowing> Borrowings { get; set; } = default!;
 }
